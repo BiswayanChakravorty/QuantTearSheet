@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "chakravortybiswayan@gmail.com";
   return (
     <main className="shell">
       <SiteNav />

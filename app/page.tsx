@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useRef, useState, type ChangeEvent, type DragEvent } from "react";
 import Link from "next/link";
-import { Activity, Download, FileChartColumnIncreasing, FileSpreadsheet, Info, LoaderCircle, RefreshCw, ShieldCheck, Upload, X } from "lucide-react";
+import { Activity, ArrowUpRight, Download, FileChartColumnIncreasing, FileSpreadsheet, Info, LoaderCircle, RefreshCw, ShieldCheck, Upload, X } from "lucide-react";
 import { Area, AreaChart, CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { analyzeRows, parseAndAnalyzeCSV, SAMPLE_CSV, QuantInputError } from "@/lib/quant-engine";
 import type { QuantAnalysis } from "@/types/quant";
@@ -145,22 +145,6 @@ export default function HomePage() {
       <div className="home-price-card"><div className="home-price-row"><div><span className="price-name">Research Starter</span><p>5 analyses / month</p></div><strong>$0</strong></div><div className="divider"/><div className="home-price-row"><div><span className="price-name">Research Pro</span><p>Unlimited analyses / month</p></div><strong>$9<span className="per-month">/mo</span></strong></div><Link href="/payment" className="btn btn-primary">Compare plans <ArrowUpRight size={14}/></Link><p className="pricing-disclaimer">Plans are displayed for now; usage limits and paid subscriptions require account and billing integration.</p></div>
     </section>
 
-    <section className="value-section">
-      <div className="eyebrow"><span className="dot" /> Why QuantTearSheet</div>
-      <h2>Research-quality structure.<br /><span className="accent-text">Without the spreadsheet overhead.</span></h2>
-      <p className="value-intro">A useful first pass should not require expensive terminals, complex spreadsheet templates, or advanced coding. Upload a CSV, inspect the same core measures researchers use to discuss return and risk, then export a concise report.</p>
-      <div className="content-grid">
-        <article className="content-card"><div className="content-icon">01</div><h2>Turn raw data into a readable story</h2><p>See growth, volatility, risk-adjusted returns, drawdowns, and monthly outcomes in one place. The charts make patterns easier to discuss than a long table of numbers.</p></article>
-        <article className="content-card"><div className="content-icon">02</div><h2>Make the workflow more convenient</h2><p>No brokerage login or trading account connection is needed. Use a compatible CSV, check the assumptions, and export a PDF tear sheet for your own review or discussion.</p></article>
-        <article className="content-card"><div className="content-icon">03</div><h2>Learn a consistent analytical language</h2><p>Metric definitions and stated conventions help beginners structure their analysis using familiar quantitative-finance concepts. The tool supports good practice; it cannot certify that a strategy meets any industry standard.</p></article>
-      </div>
-      <div className="value-callout"><ShieldCheck size={19}/><p><strong>Privacy-conscious by design:</strong> this MVP reads and analyzes CSV files in your browser. Check your file before loading it, and remember that results are only as reliable as the data and assumptions behind them.</p></div>
-      <div className="value-actions"><Link href="/methodology" className="btn">Read the methodology</Link><Link href="/about" className="btn">How the service helps</Link></div>
-    </section>
-    <section className="home-pricing">
-      <div><div className="eyebrow"><span className="dot" /> Plans that scale with your workflow</div><h2>Five tests free.<br /><span className="accent-text">Unlimited for $9/month.</span></h2><p>Start with up to five analyses a month, or choose the planned Research Pro subscription for unlimited use when checkout and account-based usage tracking are enabled.</p></div>
-      <div className="home-price-card"><div className="home-price-row"><div><span className="price-name">Research Starter</span><p>5 analyses / month</p></div><strong>$0</strong></div><div className="divider"/><div className="home-price-row"><div><span className="price-name">Research Pro</span><p>Unlimited analyses / month</p></div><strong>$9<span className="per-month">/mo</span></strong></div><Link href="/payment" className="btn btn-primary">Compare plans <ArrowUpRight size={14}/></Link><p className="pricing-disclaimer">Plans are displayed for now; usage limits and paid subscriptions require account and billing integration.</p></div>
-    </section>
-    <SiteFooter />
+        <SiteFooter />
   </main>;
 }

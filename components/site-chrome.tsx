@@ -10,8 +10,8 @@ export function SiteNav() {
       </Link>
       <nav className="topnav" aria-label="Main navigation">
         <Link href="/#analytics">Analytics</Link>
-        <Link href="/#methodology">Methodology</Link>
-        <Link href="/about">About</Link>
+        <Link href="/methodology">Methodology</Link>
+        <Link href="/about">Why QuantTearSheet</Link>
         <Link href="/privacy">Privacy</Link>
         <Link href="/contact">Contact</Link>
         <Link className="nav-payment" href="/payment">Payment <ArrowUpRight size={12} /></Link>

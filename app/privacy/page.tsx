@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SiteFooter, SiteNav } from "@/components/site-chrome";
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function PrivacyPage() {
         <h2>1. CSV files and analysis</h2>
         <p>The current analytics tool processes selected CSV files locally in your browser. The application does not send those files to a QuantTearSheet upload API. Do not upload confidential, personal, or third-party data unless you have the right to use it.</p>
         <h2>2. Information collected by hosting providers</h2>
-        <p>The website is intended to be hosted by Vercel. Hosting and security infrastructure may process technical information such as request metadata, IP addresses, browser details, and logs to operate, secure, and troubleshoot the service. Consult the hosting provider's current privacy documentation for details.</p>
+        <p>The website is intended to be hosted by Vercel. Hosting and security infrastructure may process technical information such as request metadata, IP addresses, browser details, and logs to operate, secure, and troubleshoot the service. Consult the hosting provider&apos;s current privacy documentation for details.</p>
         <h2>3. Contact messages</h2>
         <p>If you contact us by email, we will receive the information you choose to include in that message and use it to respond and handle the request. Avoid sending passwords, payment card details, or sensitive financial information.</p>
         <h2>4. Payments and third-party services</h2>
@@ -26,11 +27,11 @@ export default function PrivacyPage() {
         <h2>5. Cookies and analytics</h2>
         <p>The current app does not intentionally set product analytics cookies. Hosting, security, or third-party services may use their own technologies. Update this section if analytics, advertising, authentication, or other tracking tools are introduced.</p>
         <h2>6. Data retention and your choices</h2>
-        <p>CSV data processed locally remains under your browser's control and is not saved by the app to a server. Email correspondence may remain in the relevant email systems. You can choose not to use the site or not to send a contact message.</p>
+        <p>CSV data processed locally remains under your browser&apos;s control and is not saved by the app to a server. Email correspondence may remain in the relevant email systems. You can choose not to use the site or not to send a contact message.</p>
         <h2>7. Children and changes</h2>
         <p>This service is intended for general educational and research use, not specifically for children. We may update this policy when the service changes; the updated date will be shown at the top of this page.</p>
         <h2>8. Contact</h2>
-        <p>For privacy questions, use the <a href="/contact">Contact Us</a> page. Before launch, the site owner should publish a monitored contact email and confirm that this policy matches the actual deployment, jurisdiction, and payment setup.</p>
+        <p>For privacy questions, use the <Link href="/contact">Contact Us</Link> page. Before launch, the site owner should publish a monitored contact email and confirm that this policy matches the actual deployment, jurisdiction, and payment setup.</p>
       </article>
       <SiteFooter />
     </main>

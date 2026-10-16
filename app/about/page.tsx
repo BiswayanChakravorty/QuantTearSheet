@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Activity, FileChartColumnIncreasing, ShieldCheck } from "lucide-react";
 import { SiteFooter, SiteNav } from "@/components/site-chrome";
 
@@ -36,7 +37,7 @@ export default function AboutPage() {
       <section className="content-note">
         <h2>Who is it for?</h2>
         <p>Students, independent researchers, and quantitative finance learners who want to inspect backtest data and communicate results more clearly. Always check data quality, fees, slippage, and backtest limitations before relying on any analysis.</p>
-        <a className="btn btn-primary" href="/">Open the analytics tool</a>
+        <Link className="btn btn-primary" href="/">Open the analytics tool</Link>
       </section>
       <SiteFooter />
     </main>

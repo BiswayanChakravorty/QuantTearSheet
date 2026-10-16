@@ -1,19 +1,20 @@
+import Link from "next/link";
 import { ArrowUpRight, ShieldCheck } from "lucide-react";
 
 export function SiteNav() {
   return (
     <header className="topbar">
-      <a className="brand" href="/" aria-label="QuantTearSheet home">
+      <Link className="brand" href="/" aria-label="QuantTearSheet home">
         <span className="brand-icon"><span className="brand-mark" /></span>
         <span>quant<span style={{ color: "var(--accent)" }}>.</span>tearsheet</span>
-      </a>
+      </Link>
       <nav className="topnav" aria-label="Main navigation">
-        <a href="/#analytics">Analytics</a>
-        <a href="/#methodology">Methodology</a>
-        <a href="/about">About</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/contact">Contact</a>
-        <a className="nav-payment" href="/payment">Payment <ArrowUpRight size={12} /></a>
+        <Link href="/#analytics">Analytics</Link>
+        <Link href="/#methodology">Methodology</Link>
+        <Link href="/about">About</Link>
+        <Link href="/privacy">Privacy</Link>
+        <Link href="/contact">Contact</Link>
+        <Link className="nav-payment" href="/payment">Payment <ArrowUpRight size={12} /></Link>
       </nav>
     </header>
   );
@@ -27,10 +28,10 @@ export function SiteFooter() {
         <span className="footer-disclaimer">Historical analytics are not investment advice. Results depend on data quality and stated assumptions.</span>
       </div>
       <nav className="footer-links" aria-label="Footer navigation">
-        <a href="/about">About us</a>
-        <a href="/privacy"><ShieldCheck size={12} /> Privacy policy</a>
-        <a href="/contact">Contact us</a>
-        <a href="/payment">Payment link</a>
+        <Link href="/about">About us</Link>
+        <Link href="/privacy"><ShieldCheck size={12} /> Privacy policy</Link>
+        <Link href="/contact">Contact us</Link>
+        <Link href="/payment">Payment link</Link>
       </nav>
     </footer>
   );

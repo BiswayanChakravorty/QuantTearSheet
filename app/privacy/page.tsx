@@ -23,7 +23,7 @@ export default function PrivacyPage() {
         <h2>3. Contact messages</h2>
         <p>If you contact us by email, we will receive the information you choose to include in that message and use it to respond and handle the request. Avoid sending passwords, payment card details, or sensitive financial information.</p>
         <h2>4. Payments and third-party services</h2>
-        <p>If a payment provider is added, payment processing may take place on that provider's website under its own terms and privacy policy. QuantTearSheet should not collect or store full payment-card details. The payment page remains inactive until the site owner configures a verified payment URL.</p>
+        <p>If a payment provider is added, payment processing may take place on that provider&apos;s website under its own terms and privacy policy. QuantTearSheet should not collect or store full payment-card details. The payment page remains inactive until the site owner configures a verified payment URL.</p>
         <h2>5. Cookies and analytics</h2>
         <p>The current app does not intentionally set product analytics cookies. Hosting, security, or third-party services may use their own technologies. Update this section if analytics, advertising, authentication, or other tracking tools are introduced.</p>
         <h2>6. Data retention and your choices</h2>

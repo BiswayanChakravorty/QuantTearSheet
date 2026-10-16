@@ -44,3 +44,44 @@
 .fine-print{display:flex;align-items:center;gap:6px;font-size:10px!important;margin-top:14px!important}
 @media(max-width:900px){.content-grid{grid-template-columns:1fr}.topbar{align-items:flex-start;padding:15px 0;flex-direction:column}.topnav{justify-content:flex-start;gap:13px}.site-footer{flex-direction:column}.footer-links{justify-content:flex-start}}
 @media(max-width:680px){.content-hero{padding:38px 0 22px}.content-card,.content-note,.contact-card{padding:19px}.legal-document{padding:38px 0 20px}.topnav{gap:11px;font-size:10px}.footer-links{gap:12px}}
+
+
+/* Value proposition, methodology and pricing */
+.value-section{margin:58px 0 22px;padding-top:30px;border-top:1px solid var(--line)}
+.value-section>h2,.home-pricing h2{font-size:clamp(25px,3.3vw,39px);line-height:1.12;letter-spacing:-.05em;margin:15px 0 13px;font-weight:600}
+.value-intro{max-width:760px;color:var(--muted);font-size:13px;line-height:1.85;margin:0 0 20px}
+.value-section .content-grid{margin-top:18px}
+.value-section .content-icon{font-size:11px;font-weight:700;letter-spacing:.1em}
+.value-callout{display:flex;align-items:flex-start;gap:12px;border:1px solid #b8f36b2b;background:#b8f36b08;border-radius:10px;padding:16px;color:var(--accent)}
+.value-callout p{font-size:11px;line-height:1.8;color:var(--muted);margin:0}
+.value-callout strong{color:var(--text)}
+.value-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+.home-pricing{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.75fr);gap:28px;align-items:center;margin:45px 0 22px;padding:28px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(140deg,#111a28eb,#0c121df0)}
+.home-pricing>div:first-child>p{max-width:540px;color:var(--muted);font-size:12px;line-height:1.85}
+.home-price-card{padding:20px;border:1px solid #344156;border-radius:11px;background:#080d15}
+.home-price-row{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.home-price-row strong{font-size:24px;letter-spacing:-.04em}
+.home-price-row p{margin:5px 0 0;font-size:10px;color:var(--muted)}
+.price-name{font-size:12px;font-weight:700}
+.per-month{font-size:11px;color:var(--muted);font-weight:400;letter-spacing:0}
+.home-price-card>.btn{width:100%;margin-top:12px}
+.pricing-disclaimer{font-size:9px;line-height:1.6;color:var(--muted);margin:11px 0 0}
+.pricing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:10px 0 22px}
+.pricing-card{border:1px solid var(--line);border-radius:14px;padding:26px;background:linear-gradient(145deg,#111a28eb,#0c121df0)}
+.pricing-featured{border-color:#b8f36b70;box-shadow:inset 0 0 0 1px #b8f36b12}
+.pricing-label{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.16em}
+.pricing-card h2{font-size:21px;margin:18px 0 9px;letter-spacing:-.035em}
+.pricing-price{font-size:42px;font-weight:700;letter-spacing:-.06em;margin:0 0 8px}
+.pricing-price span{font-size:12px;font-weight:400;letter-spacing:0;color:var(--muted)}
+.pricing-description{min-height:40px;color:var(--muted);font-size:12px;line-height:1.7}
+.pricing-list{display:grid;gap:13px;list-style:none;padding:0;margin:23px 0}
+.pricing-list li{display:flex;align-items:flex-start;gap:9px;color:#c4cedc;font-size:12px;line-height:1.5}
+.pricing-list svg{color:var(--accent);flex-shrink:0;margin-top:1px}
+.pricing-card>.btn{width:100%;margin-top:5px}
+.methodology-section{margin:10px 0 20px}
+.methodology-section .content-card{height:100%}
+.formula{display:block;overflow-wrap:anywhere;border:1px solid var(--line);background:#080d15;padding:12px 14px;border-radius:8px;color:var(--accent);font-size:12px;line-height:1.7;margin:10px 0 13px}
+.methodology-table{width:100%;border-collapse:collapse;margin:12px 0 24px;font-size:12px}
+.methodology-table th,.methodology-table td{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid var(--line);line-height:1.65}
+.methodology-table th{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.1em}
+@media(max-width:760px){.home-pricing{grid-template-columns:1fr;padding:19px}.pricing-grid{grid-template-columns:1fr}.pricing-card{padding:21px}.methodology-table{font-size:10px}.methodology-table th,.methodology-table td{padding:8px 6px}}

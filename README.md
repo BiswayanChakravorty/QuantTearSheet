@@ -1,1 +1,71 @@
 # QuantTearSheet
+
+A browser-based quantitative analytics tool for turning strategy-return or asset-price CSV files into performance metrics, an interactive dashboard, and a one-page PDF tear sheet.
+
+## Current MVP
+
+- CSV ingestion for `Date,Return` and `Date,Price`.
+- Client-side file processing; no brokerage credentials and no upload API.
+- CAGR, total return, annualized volatility, Sharpe, Sortino, maximum drawdown/duration, historical 95% VaR, observation win rate, best/worst month.
+- Interactive equity curve and underwater drawdown chart; annual monthly-return heatmap.
+- Configurable annual risk-free rate and landscape PDF export.
+- Responsive dark research dashboard and sample CSV.
+
+## Stack
+
+Next.js App Router, React, TypeScript, Tailwind CSS v4, Recharts, Lucide, jsPDF, and html2canvas.
+
+## Run locally
+
+Requires Node.js 20.9+.
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:3000. Validate using `npm run typecheck` and `npm run build`.
+
+## CSV format
+
+### Daily returns
+
+```csv
+Date,Return
+2024-01-02,0.004
+2024-01-03,-0.002
+2024-01-04,0.006
+```
+
+Returns are decimal by default: `0.01 = 1%`. Headers such as `Return_pct` and `ReturnPercent` explicitly mean percentage points, so `1` means 1%.
+
+### Prices
+
+```csv
+Date,Price
+2024-01-02,100
+2024-01-03,101
+2024-01-04,99.5
+```
+
+Simple close-to-close returns are derived from prices. Adjusted prices are preferable where available. Dividends, fees, slippage, corporate actions, and trade records are not inferred.
+
+## Metric conventions
+
+- Daily observation frequency is assumed for annualization and shown in the UI.
+- Volatility is sample standard deviation multiplied by `sqrt(252)`.
+- Sharpe uses the effective daily rate derived from the annual risk-free rate, mean daily excess return, and sample daily standard deviation, annualized by `sqrt(252)`.
+- Sortino uses mean daily excess return divided by downside deviation relative to the daily risk-free hurdle, annualized by `sqrt(252)`.
+- CAGR uses elapsed calendar days between the first and final equity observations; short-period estimates can be unstable.
+- Historical VaR is the non-negative magnitude of the empirical 5th percentile return, not a worst-case loss.
+- Drawdown duration is the calendar-day peak-to-trough duration at the maximum drawdown; recovery duration is not included.
+- Win rate is the proportion of positive return observations, not trade-level win rate. Profit factor and trade count require trade-level data and are not inferred.
+- Price analysis uses first price as capital baseline; it does not create a return observation for the first row.
+
+## Privacy and deployment
+
+CSV data is read and analyzed in the browser and is not submitted to a server in this MVP. Deploy to Vercel or another platform supporting Next.js. Static hosting requires explicit static-export configuration.
+
+## Disclaimer
+
+For research and educational use. Backtests can mislead because of look-ahead bias, survivorship bias, overfitting, unrealistic execution assumptions, small samples, and data errors. This tool is not investment advice and does not guarantee future performance.
